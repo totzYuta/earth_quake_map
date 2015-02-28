@@ -9,10 +9,14 @@
     <link href="/map.css" rel="stylesheet" />
     <script src="map.js"></script>
 
-    <!-- USGS URL data source -->
-    <script src="http://earthquake.usgs.gov/earthquakes/feed/geojsonp/2.5/week"></script>
 </head>
 <body>
     <div id="mapdisplay"></div>
+    <form>
+        <p>
+            <input type="button" id="tokyo" value="Tokyo" onclick="toTokyo()" />
+            <input type="button" id="shinbashi" value="Shinbashi" onclick="toShinbashi()" />
+        </p>
+    </form>
 </body>
 </html>
