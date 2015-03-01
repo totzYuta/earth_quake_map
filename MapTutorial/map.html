@@ -4,6 +4,10 @@
     <title>MAP</title>
     <!-- Google Maps API references -->
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=visualization"></script>
+    <!--
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyA-3R36XDv6W0A1ef-6Gg4sLs4XzR63OeQ&sensor=false" type="text/javascript" charset="utf-8"></script>
+    -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
 
     <!-- map references -->
     <link href="/map.css" rel="stylesheet" />
@@ -11,12 +15,21 @@
 
 </head>
 <body>
-    <div id="mapdisplay"></div>
-    <form>
-        <p>
-            <input type="button" id="tokyo" value="Tokyo" onclick="toTokyo()" />
-            <input type="button" id="shinbashi" value="Shinbashi" onclick="toShinbashi()" />
-        </p>
-    </form>
+    <div id="map-canvas"></div>
+    <div id="directions-panel"></div>
+    <div id="control">
+        <strong>Start:</strong>
+        <select id="start" onchange="calcRoute();">
+            <option value="chicago, il">Chicago</option>
+            <option value="st louis, mo">St Louis</option>
+            <option value="los angeles, ca">Los Angeles</option>
+        </select>
+        <strong>End:</strong>
+        <select id="end" onchange="calcRoute();">
+            <option value="chicago, il">Chicago</option>
+            <option value="st louis, mo">St Louis</option>
+            <option value="los angeles, ca">Los Angeles</option>
+        </select>
+    </div>
 </body>
 </html>

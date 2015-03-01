@@ -1,5 +1,26 @@
-﻿html, body, #mapdisplay {
+﻿html, body{
     margin: 0;
     padding: 0;
-    height: 80%;
+    height: 100%;
+}
+
+#map-canvas {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    height: 100%;
+}
+
+#directions-panel {
+    float: left;
+    width: 50%;
+    height: 100%;
+    overflow: scroll;
+}
+
+#control {
+    position: absolute;
+    top: 100px;
+    left: 10px;
 }
